@@ -1,0 +1,10 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#F6FAFF"/>
+  <rect x="96" y="96" width="1088" height="608" rx="32" fill="#FFFFFF" stroke="#D9E4F2"/>
+  <rect x="172" y="186" width="386" height="426" rx="24" fill="#EEF4FF"/>
+  <rect x="604" y="186" width="504" height="188" rx="24" fill="#EEF4FF"/>
+  <rect x="604" y="398" width="504" height="214" rx="24" fill="#EEF4FF"/>
+  <circle cx="364" cy="356" r="96" fill="#7FB3FF"/>
+  <circle cx="826" cy="304" r="58" fill="#9D92FF"/>
+  <text x="650" y="508" fill="#2A3B58" font-size="48" font-family="sans-serif">AI Prototype</text>
+</svg>
