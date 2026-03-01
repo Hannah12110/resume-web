@@ -1,0 +1,16 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="1280" height="800" fill="#f6f6f4"/>
+  <rect x="32" y="26" width="1216" height="74" rx="18" fill="#ffffff" stroke="#d8d9d4"/>
+  <text x="76" y="73" fill="#151515" font-size="46" font-family="sans-serif" font-weight="700">Atoms</text>
+  <rect x="1090" y="34" width="120" height="56" rx="28" fill="#5f7257"/>
+  <text x="1150" y="71" fill="#ffffff" text-anchor="middle" font-size="34" font-family="sans-serif">注册</text>
+  <text x="640" y="220" text-anchor="middle" font-size="88" font-family="sans-serif" font-weight="700">
+    <tspan fill="#ff8a55">赚取</tspan>
+    <tspan fill="#bc7af4">30%</tspan>
+    <tspan fill="#111111"> 佣金</tspan>
+  </text>
+  <text x="640" y="320" text-anchor="middle" fill="#222" font-size="92" font-family="sans-serif" font-weight="700">没有最低要求，没有限制</text>
+  <text x="640" y="390" text-anchor="middle" fill="#707070" font-size="40" font-family="sans-serif">分享你的链接，持续获得返佣</text>
+  <rect x="515" y="450" width="250" height="82" rx="18" fill="#5f7257"/>
+  <text x="640" y="503" fill="#fff" text-anchor="middle" font-size="44" font-family="sans-serif" font-weight="700">开始赚钱</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#F6FAFF"/>
+  <rect x="94" y="94" width="1092" height="612" rx="30" fill="#FFFFFF" stroke="#D8E3F2"/>
+  <circle cx="360" cy="330" r="142" fill="#9FC4FF"/>
+  <circle cx="680" cy="330" r="142" fill="#C6B8FF"/>
+  <circle cx="1000" cy="330" r="142" fill="#AEE8CF"/>
+  <rect x="206" y="520" width="868" height="104" rx="18" fill="#EEF4FF"/>
+  <text x="250" y="584" fill="#24354E" font-size="46" font-family="sans-serif">Multimodal AI Workflow</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#F4F9FF"/>
+  <rect x="96" y="100" width="1088" height="600" rx="30" fill="#FFFFFF" stroke="#D8E2F0"/>
+  <rect x="156" y="176" width="968" height="56" rx="12" fill="#ECF3FF"/>
+  <rect x="156" y="266" width="620" height="22" rx="7" fill="#ABC9FF"/>
+  <rect x="156" y="304" width="900" height="18" rx="6" fill="#D7E7FF"/>
+  <rect x="156" y="334" width="840" height="18" rx="6" fill="#D7E7FF"/>
+  <rect x="156" y="364" width="780" height="18" rx="6" fill="#D7E7FF"/>
+  <rect x="156" y="394" width="860" height="18" rx="6" fill="#D7E7FF"/>
+  <text x="156" y="520" fill="#24354E" font-size="48" font-family="sans-serif">AI Copywriting Lab</text>
+</svg>

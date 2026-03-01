@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f6f6f4;
+  --panel: #ffffff;
+  --line: #d8d9d4;
+  --electric: #5f7257;
+  --iris: #5f7257;
+  --mist: #0f172a;
+  --font-heading: "Avenir Next", "Trebuchet MS", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-body: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--mist);
+  font-family: var(--font-body), sans-serif;
+}
+
+main {
+  isolation: isolate;
+}
+
+.section-anchor {
+  scroll-margin-top: 92px;
+}
+
+.hero-google {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(169, 178, 157, 0.2), transparent 38%),
+    radial-gradient(circle at 86% 16%, rgba(206, 202, 188, 0.24), transparent 35%),
+    linear-gradient(180deg, #fbfbf9 0%, #f5f5f1 58%, #f1f1ec 100%);
+}
+
+.grid-noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: linear-gradient(rgba(95, 114, 87, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 114, 87, 0.06) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 24%, transparent 86%);
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
