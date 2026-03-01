@@ -1,24 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 1. 启用静态导出（必须）
+  // 1. 启用静态导出（GitHub Pages必需）
   output: 'export',
-  // 2. 配置GitHub Pages子路径（和仓库名resume-web一致）
+  
+  // 2. 配置GitHub Pages子路径（和仓库名resume-web严格一致）
   basePath: '/resume-web',
   assetPrefix: '/resume-web/',
-  // 3. 禁用图片优化（GitHub Pages不支持）
+  
+  // 3. 禁用图片优化（核心！GitHub Pages不支持Next.js图片优化）
   images: {
-    unoptimized: true,
+    unoptimized: true, // 必须加这个，覆盖你原来的formats配置
+    formats: ["image/avif", "image/webp"] // 保留你原有的格式配置
   },
-  // 4. 确保路由后缀有/，避免404
+  
+  // 4. 确保路由后缀带/，避免404
   trailingSlash: true,
-  // 5. 静态资源路径适配
+  
+  // 5. 静态资源输出目录（匹配Workflow的publish_dir）
   distDir: 'out',
   
-  // 新增：添加publicRuntimeConfig配置（核心）
+  // 6. 运行时配置，供组件获取basePath
   publicRuntimeConfig: {
-    // 和basePath保持一致，供组件中获取
     basePath: '/resume-web'
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
