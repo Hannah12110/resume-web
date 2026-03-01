@@ -1,5 +1,7 @@
 import { PortfolioProject, ProjectCategory } from "@/types";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const categories: ProjectCategory[] = ["代码开发类", "图像生成类", "多模态应用类"];
 
 export const projects: PortfolioProject[] = [
@@ -15,7 +17,7 @@ export const projects: PortfolioProject[] = [
       "多轮发布测试后沉淀为可复用开发流程"
     ],
     tags: ["#Gemini", "#Cursor", "#VibeCoding", "#AI开发", "#历史游戏"],
-    cover: "/projects/project-1-history-game.png",
+    cover: `${BASE_PATH}/projects/project-1-history-game.png`,
     coverTone: "heritage",
     codeSnippet: {
       language: "typescript",
@@ -59,7 +61,7 @@ export const build = composePlayableDemo(gameModules);`
       "联动设计与开发资源，推动页面方案落地"
     ],
     tags: ["#实习项目", "#Affiliate", "#产品策略", "#落地实践"],
-    cover: "/projects/project-2-internship-affiliate.png",
+    cover: `${BASE_PATH}/projects/project-2-internship-affiliate.png`,
     coverTone: "corporate",
     demoLinks: [
       {
@@ -85,7 +87,7 @@ export const build = composePlayableDemo(gameModules);`
       "在 Figma 完成高保真交互稿输出"
     ],
     tags: ["#产品设计", "#时间管理", "#Figma", "#原型设计"],
-    cover: "/projects/project-4-timebook-prototype.png",
+    cover: `${BASE_PATH}/projects/project-4-timebook-prototype.png`,
     coverTone: "prototype",
     demoLinks: [
       {
@@ -111,7 +113,7 @@ export const build = composePlayableDemo(gameModules);`
       "发布到小红书并根据反馈持续优化内容"
     ],
     tags: ["#AIGC视频", "#历史内容", "#多模态", "#小红书"],
-    cover: "/projects/project-3-history-video.png",
+    cover: `${BASE_PATH}/projects/project-3-history-video.png`,
     coverTone: "video",
     demoLinks: [
       {

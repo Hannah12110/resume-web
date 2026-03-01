@@ -1,11 +1,5 @@
 import Image from "next/image";
-import getConfig from 'next/config'; // 新增：导入getConfig
 import { PortfolioProject } from "@/types";
-
-// 新增：获取全局运行时配置
-const { publicRuntimeConfig } = getConfig();
-// 新增：提取basePath（生产环境是/resume-web，本地开发是空）
-const basePath = publicRuntimeConfig.basePath || '';
 
 interface ProjectCardProps {
   project: PortfolioProject;
@@ -35,20 +29,16 @@ export function ProjectCard({ project, onOpen }: ProjectCardProps) {
       ? "from-[#2f3d35]/40 via-[#5a6e63]/15 to-transparent"
       : "from-[#2d3a32]/35 to-transparent";
 
-  // 新增：拼接图片完整路径（核心修改）
-  const coverImagePath = `${basePath}${project.cover}`;
-
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white shadow-panel transition hover:-translate-y-1 hover:border-electric/60 hover:shadow-[0_22px_44px_rgba(95,114,87,0.22)]">
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
-          src={coverImagePath} // 修改：使用拼接后的路径
+          src={project.cover}
           alt={`${project.title} 展示图`}
           fill
           className={`object-cover transition duration-500 group-hover:scale-105 ${imageTone}`}
           sizes="(max-width: 768px) 100vw, 50vw"
-          // 新增：禁用图片优化（适配GitHub Pages）
-          unoptimized={true}
+          unoptimized
         />
         <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${overlayTone}`} />
         <div className="absolute left-3 top-3 rounded-full border border-electric/25 bg-white/95 px-3 py-1 text-xs text-electric backdrop-blur">

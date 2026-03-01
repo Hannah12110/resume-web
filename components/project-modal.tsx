@@ -1,14 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import getConfig from 'next/config'; // 新增：导入getConfig
 import { ExternalLink, PlayCircle, X } from "lucide-react";
 import { PortfolioProject } from "@/types";
-
-// 新增：获取全局运行时配置
-const { publicRuntimeConfig } = getConfig();
-// 新增：提取basePath（生产环境是/resume-web，本地开发是空）
-const basePath = publicRuntimeConfig.basePath || '';
 
 interface ProjectModalProps {
   project: PortfolioProject;
@@ -27,9 +21,6 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       : project.coverTone === "prototype"
       ? "brightness-[0.98] saturate-[0.82] contrast-[1.04]"
       : "";
-
-  // 新增：拼接图片完整路径（核心修改）
-  const coverImagePath = `${basePath}${project.cover}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-200/55 p-4 backdrop-blur-md sm:p-8">
@@ -52,12 +43,12 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="space-y-6">
           <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-line">
             <Image
-              src={coverImagePath} // 修改：使用拼接后的路径
+              src={project.cover}
               alt={`${project.title} 详情图`}
               width={1200}
               height={760}
               className={`h-full w-full object-cover transition ${imageTone}`}
-              unoptimized={true} // 新增：禁用图片优化（适配GitHub Pages）
+              unoptimized
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#243329]/45 via-[#41564a]/20 to-transparent" />
           </div>

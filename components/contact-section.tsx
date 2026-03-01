@@ -1,4 +1,6 @@
 export function ContactSection() {
+  const resumeHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/resume.pdf`;
+
   return (
     <section id="contact" className="section-anchor">
       <div className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
@@ -15,7 +17,7 @@ export function ContactSection() {
 
           <div className="mt-8">
             <a
-              href="/resume.pdf"
+              href={resumeHref}
               className="inline-flex rounded-xl border border-electric bg-electric px-5 py-3 text-sm font-medium text-white transition hover:bg-[#506248] hover:shadow-[0_10px_22px_rgba(95,114,87,0.24)]"
             >
               查看简历
